@@ -3,7 +3,6 @@ import { Hero } from '@/components/sections/Hero'
 import { SocialProof } from '@/components/sections/SocialProof'
 import { Services } from '@/components/sections/Services'
 import { Process } from '@/components/sections/Process'
-import { Pricing } from '@/components/sections/Pricing'
 import { About } from '@/components/sections/About'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { FAQ } from '@/components/sections/FAQ'
@@ -19,7 +18,6 @@ export default function Home() {
       <SocialProof />
       <Services />
       <Process />
-      <Pricing />
       <About />
       <Testimonials />
       <FAQ />

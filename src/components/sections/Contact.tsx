@@ -15,8 +15,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '(801) 555-0123',
-    href: 'tel:+18015550123',
+    value: '(385) 215-9346',
+    href: 'tel:+13852159346',
   },
   {
     icon: MapPin,

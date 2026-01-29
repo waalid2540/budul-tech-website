@@ -10,7 +10,6 @@ const services = [
     title: 'Web Development',
     description: 'Modern, fast, responsive websites that convert visitors into paying customers.',
     features: ['Business Sites', 'Landing Pages', 'E-commerce', 'Web Apps'],
-    price: 'From $1,500',
     gradient: 'from-primary to-secondary',
   },
   {
@@ -18,7 +17,6 @@ const services = [
     title: 'AI Integration',
     description: 'Automate your business with intelligent AI chatbots, assistants, and automation tools.',
     features: ['AI Chatbots', 'Process Automation', 'Smart Assistants', 'Custom AI Tools'],
-    price: 'From $1,500',
     gradient: 'from-accent to-primary',
   },
   {
@@ -26,7 +24,6 @@ const services = [
     title: 'App Development',
     description: 'Native and cross-platform mobile applications that users love to use.',
     features: ['iOS & Android', 'Progressive Web Apps', 'MVP Development'],
-    price: 'From $5,000',
     gradient: 'from-secondary to-accent',
   },
   {
@@ -34,7 +31,6 @@ const services = [
     title: 'Digital Marketing',
     description: 'Data-driven marketing strategies that grow your online presence and revenue.',
     features: ['Social Media', 'SEO', 'Paid Ads', 'Content Marketing'],
-    price: 'From $800/mo',
     gradient: 'from-success to-secondary',
   },
   {
@@ -42,7 +38,6 @@ const services = [
     title: 'Custom Software',
     description: 'Tailored software solutions that solve your unique business challenges.',
     features: ['Internal Tools', 'CRM Systems', 'Dashboards', 'APIs'],
-    price: 'From $3,000',
     gradient: 'from-primary to-accent',
   },
   {
@@ -50,7 +45,6 @@ const services = [
     title: 'Maintenance & Support',
     description: 'Keep your digital assets running smoothly with ongoing support and updates.',
     features: ['24/7 Monitoring', 'Security Updates', 'Performance Optimization'],
-    price: 'From $300/mo',
     gradient: 'from-accent to-success',
   },
 ]
@@ -93,7 +87,7 @@ export function Services() {
                 <p className="text-dark-400 mb-5">{service.description}</p>
 
                 {/* Features */}
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-2">
                   {service.features.map((feature) => (
                     <span
                       key={feature}
@@ -102,11 +96,6 @@ export function Services() {
                       {feature}
                     </span>
                   ))}
-                </div>
-
-                {/* Price */}
-                <div className="pt-4 border-t border-dark-800">
-                  <span className="text-lg font-bold gradient-text">{service.price}</span>
                 </div>
               </div>
             </motion.div>
