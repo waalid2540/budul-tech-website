@@ -37,21 +37,33 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
+  const [error, setError] = useState('')
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
 
-    // Reset form after showing success
-    setTimeout(() => {
+      setIsSubmitted(true)
       setFormData({ name: '', email: '', company: '', budget: '', message: '' })
-      setIsSubmitted(false)
-    }, 3000)
+
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } catch {
+      setError('Failed to send message. Please try again or call us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -238,6 +250,10 @@ export function Contact() {
                   </>
                 )}
               </button>
+
+              {error && (
+                <p className="mt-4 text-red-400 text-sm">{error}</p>
+              )}
             </form>
           </motion.div>
         </div>
