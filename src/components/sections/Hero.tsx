@@ -1,14 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Play, Zap, DollarSign, Clock, CheckCircle2 } from 'lucide-react'
-
-const stats = [
-  { icon: Zap, label: '10x Faster Delivery', color: 'text-primary' },
-  { icon: DollarSign, label: '50% Cost Savings', color: 'text-success' },
-  { icon: Clock, label: '24h Response Time', color: 'text-secondary' },
-  { icon: CheckCircle2, label: '100% Satisfaction', color: 'text-accent' },
-]
+import { ArrowRight, Play, Zap } from 'lucide-react'
 
 export function Hero() {
   const handleClick = (href: string) => {
@@ -89,70 +82,29 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Content - Stats Card */}
+          {/* Right Content - Video */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative"
+            className="relative w-full"
           >
-            <div className="relative bg-dark-900/80 backdrop-blur-xl border border-dark-800/50 rounded-2xl p-6 md:p-8">
+            <div className="relative bg-dark-900/80 backdrop-blur-xl border-2 border-dark-700/50 rounded-2xl overflow-hidden shadow-2xl">
               {/* Decorative top gradient line */}
-              <div className="absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-secondary z-10" />
 
-              {/* Code Window Header */}
-              <div className="flex items-center gap-2 mb-6">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="ml-4 text-sm text-dark-500 font-mono">performance.tsx</span>
-              </div>
-
-              {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                    className="bg-dark-800/50 border border-dark-700/50 rounded-xl p-4 hover:border-dark-600 transition-colors"
-                  >
-                    <stat.icon className={`w-8 h-8 ${stat.color} mb-3`} />
-                    <p className="text-sm font-medium text-dark-300">{stat.label}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Code Snippet */}
-              <div className="mt-6 bg-dark-950 rounded-lg p-4 font-mono text-sm overflow-hidden">
-                <div className="flex items-center gap-2 text-dark-500 mb-2">
-                  <span className="text-accent">const</span>
-                  <span className="text-dark-300">results</span>
-                  <span className="text-dark-500">=</span>
-                  <span className="text-success">{'{'}</span>
-                </div>
-                <div className="pl-4 space-y-1">
-                  <div>
-                    <span className="text-secondary">delivery</span>
-                    <span className="text-dark-500">:</span>
-                    <span className="text-primary">{" '10x faster'"}</span>
-                    <span className="text-dark-500">,</span>
-                  </div>
-                  <div>
-                    <span className="text-secondary">savings</span>
-                    <span className="text-dark-500">:</span>
-                    <span className="text-primary">{" '50%'"}</span>
-                    <span className="text-dark-500">,</span>
-                  </div>
-                  <div>
-                    <span className="text-secondary">satisfaction</span>
-                    <span className="text-dark-500">:</span>
-                    <span className="text-primary">{" '100%'"}</span>
-                  </div>
-                </div>
-                <div className="text-success">{'}'}</div>
-              </div>
+              {/* Video */}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto object-cover aspect-[4/5]"
+              >
+                <source src="/hero-video.mov" type="video/quicktime" />
+                <source src="/hero-video.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
 
             {/* Floating Elements */}
