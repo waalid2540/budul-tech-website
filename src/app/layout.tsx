@@ -17,33 +17,33 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Budul Tech LLC | AI-Powered Development Agency',
-  description: 'Budul Tech delivers websites, apps, AI integrations, and marketing solutions at unprecedented speed. Powered by AI, driven by family values. Based in Utah, USA.',
-  keywords: ['web development', 'AI integration', 'app development', 'digital marketing', 'Utah', 'software development', 'AI agency'],
-  authors: [{ name: 'Budul Tech LLC' }],
-  creator: 'Budul Tech LLC',
-  publisher: 'Budul Tech LLC',
+  title: 'Budul Tech | Revenue-Driving Technology for Businesses',
+  description: 'Budul Tech engineers websites, automation, and AI systems that eliminate inefficiency and increase profit. We build business systems, not just software.',
+  keywords: ['business automation', 'AI systems', 'web applications', 'workflow automation', 'CRM integration', 'custom software', 'business technology'],
+  authors: [{ name: 'Budul Tech' }],
+  creator: 'Budul Tech',
+  publisher: 'Budul Tech',
   metadataBase: new URL('https://budultech.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://budultech.com',
-    siteName: 'Budul Tech LLC',
-    title: 'Budul Tech LLC | AI-Powered Development Agency',
-    description: 'We build your digital future in days, not months. AI-powered development agency based in Utah.',
+    siteName: 'Budul Tech',
+    title: 'Budul Tech | Revenue-Driving Technology for Businesses',
+    description: 'We engineer websites, automation, and AI systems that eliminate inefficiency and increase profit.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Budul Tech - AI-Powered Development Agency',
+        alt: 'Budul Tech - Revenue-Driving Technology',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Budul Tech LLC | AI-Powered Development Agency',
-    description: 'We build your digital future in days, not months. AI-powered development agency based in Utah.',
+    title: 'Budul Tech | Revenue-Driving Technology for Businesses',
+    description: 'We engineer websites, automation, and AI systems that eliminate inefficiency and increase profit.',
     images: ['/og-image.png'],
   },
   robots: {

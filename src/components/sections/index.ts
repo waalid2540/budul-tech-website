@@ -1,5 +1,13 @@
 export { Navigation } from './Navigation'
 export { Hero } from './Hero'
+export { Problem } from './Problem'
+export { WhatWeEngineer } from './WhatWeEngineer'
+export { HowWeWork } from './HowWeWork'
+export { Statement } from './Statement'
+export { FinalCTA } from './FinalCTA'
+export { Footer } from './Footer'
+
+// Legacy components (can be removed if not used elsewhere)
 export { SocialProof } from './SocialProof'
 export { Services } from './Services'
 export { Process } from './Process'
@@ -9,4 +17,3 @@ export { Testimonials } from './Testimonials'
 export { FAQ } from './FAQ'
 export { CTA } from './CTA'
 export { Contact } from './Contact'
-export { Footer } from './Footer'
