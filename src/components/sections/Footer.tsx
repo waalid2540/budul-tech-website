@@ -162,10 +162,10 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Budul Tech LLC. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-dark-500 hover:text-dark-300 text-sm transition-colors">
+              <a href="/privacy" className="text-dark-500 hover:text-dark-300 text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-dark-500 hover:text-dark-300 text-sm transition-colors">
+              <a href="/terms" className="text-dark-500 hover:text-dark-300 text-sm transition-colors">
                 Terms of Service
               </a>
             </div>
