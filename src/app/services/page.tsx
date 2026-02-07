@@ -164,14 +164,14 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+14087919652"
+                href="tel:+13852159346"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white bg-gradient-to-r from-primary to-secondary rounded-xl transition-all duration-300 hover:shadow-glow hover:scale-[1.02]"
               >
                 <Phone className="w-5 h-5" />
-                (408) 791-9652
+                (385) 215-9346
               </a>
               <a
-                href="sms:+14087919652"
+                href="sms:+13852159346"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-dark-50 border-2 border-dark-700 rounded-xl transition-all duration-300 hover:border-primary hover:text-primary"
               >
                 <MessageSquare className="w-5 h-5" />
@@ -326,7 +326,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <a
-                  href="tel:+14087919652"
+                  href="tel:+13852159346"
                   className="block w-full text-center px-6 py-3 font-semibold text-white bg-gradient-to-r from-primary to-secondary rounded-xl transition-all duration-300 hover:shadow-glow"
                 >
                   Get Started
@@ -418,14 +418,14 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
-                href="tel:+14087919652"
+                href="tel:+13852159346"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white bg-gradient-to-r from-primary to-secondary rounded-xl transition-all duration-300 hover:shadow-glow hover:scale-[1.02]"
               >
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
               <a
-                href="sms:+14087919652"
+                href="sms:+13852159346"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-dark-50 border-2 border-dark-700 rounded-xl transition-all duration-300 hover:border-primary hover:text-primary"
               >
                 <MessageSquare className="w-5 h-5" />
@@ -433,10 +433,10 @@ export default function ServicesPage() {
               </a>
             </div>
             <a
-              href="tel:+14087919652"
+              href="tel:+13852159346"
               className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
             >
-              (408) 791-9652
+              (385) 215-9346
             </a>
           </motion.div>
         </div>
