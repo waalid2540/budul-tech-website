@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
+  { name: 'Services', href: '/services' },
   { name: 'Start', href: '/start' },
   { name: 'Systems', href: '/systems' },
   { name: 'Process', href: '/process' },
