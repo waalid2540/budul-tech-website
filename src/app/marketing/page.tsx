@@ -179,22 +179,23 @@ export default function MarketingPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple Pricing</h2>
-              <p className="text-xl text-gray-600">Everything included. No hidden fees.</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Custom Solutions For Your Business</h2>
+              <p className="text-xl text-gray-600">Every business is different. Let&apos;s build a plan that fits yours.</p>
             </div>
             
             <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-8 md:p-12 text-white">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
                 <div>
                   <div className="text-blue-200 font-medium mb-2">AI Marketing Engine</div>
-                  <div className="text-5xl md:text-6xl font-bold">$2,000<span className="text-2xl font-normal text-blue-200">/month</span></div>
+                  <div className="text-4xl md:text-5xl font-bold">Done-For-You Marketing</div>
+                  <p className="text-blue-200 mt-2">Pricing based on your business needs</p>
                 </div>
                 <div className="mt-6 md:mt-0">
                   <a 
-                    href="https://buy.stripe.com/test_xxx" 
+                    href="tel:+13852159346" 
                     className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition"
                   >
-                    Get Started Now
+                    Book a Free Call
                   </a>
                 </div>
               </div>
@@ -214,7 +215,7 @@ export default function MarketingPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-gray-600 mb-4">Prefer to talk first?</p>
+              <p className="text-gray-600 mb-4">Ready to grow your business?</p>
               <a 
                 href="tel:+13852159346"
                 className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800"
@@ -293,10 +294,10 @@ export default function MarketingPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://buy.stripe.com/test_xxx"
+              href="tel:+13852159346"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition flex items-center gap-2"
             >
-              Start Now - $2,000/month
+              Book Your Free Strategy Call
               <ArrowRight className="w-5 h-5" />
             </a>
             <a 
