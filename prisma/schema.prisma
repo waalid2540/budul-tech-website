@@ -1,0 +1,152 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String
+  name          String?
+  role          String    @default("CLIENT")  // ADMIN or CLIENT
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  client        Client?
+}
+
+model Client {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  businessName    String
+  businessType    String?
+  website         String?
+  phone           String?
+  address         String?
+  description     String?
+  
+  chatbotEnabled  Boolean   @default(true)
+  chatbotName     String    @default("AI Assistant")
+  chatbotGreeting String    @default("Hi! How can I help you today?")
+  chatbotColor    String    @default("#3B82F6")
+  chatbotContext  String?
+  
+  sendgridApiKey  String?
+  twilioSid       String?
+  twilioToken     String?
+  twilioPhone     String?
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  leads           Lead[]
+  chatMessages    ChatMessage[]
+  contents        Content[]
+  emailCampaigns  EmailCampaign[]
+  smsCampaigns    SmsCampaign[]
+  contacts        Contact[]
+}
+
+model Lead {
+  id          String      @id @default(cuid())
+  clientId    String
+  client      Client      @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  
+  name        String?
+  email       String?
+  phone       String?
+  message     String?
+  source      String      @default("chatbot")
+  status      String      @default("NEW")  // NEW, CONTACTED, QUALIFIED, CONVERTED, LOST
+  notes       String?
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  
+  chatMessages ChatMessage[]
+}
+
+model ChatMessage {
+  id          String    @id @default(cuid())
+  clientId    String
+  client      Client    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  leadId      String?
+  lead        Lead?     @relation(fields: [leadId], references: [id], onDelete: SetNull)
+  
+  role        String
+  content     String
+  sessionId   String
+  
+  createdAt   DateTime  @default(now())
+}
+
+model Content {
+  id          String    @id @default(cuid())
+  clientId    String
+  client      Client    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  
+  type        String
+  platform    String?
+  title       String?
+  content     String
+  hashtags    String?
+  imagePrompt String?
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Contact {
+  id          String    @id @default(cuid())
+  clientId    String
+  client      Client    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  
+  name        String?
+  email       String?
+  phone       String?
+  tags        String?
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model EmailCampaign {
+  id          String    @id @default(cuid())
+  clientId    String
+  client      Client    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  
+  name        String
+  subject     String
+  body        String
+  recipients  String?
+  status      String    @default("DRAFT")  // DRAFT, SCHEDULED, SENT, FAILED
+  
+  scheduledAt DateTime?
+  sentAt      DateTime?
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model SmsCampaign {
+  id          String    @id @default(cuid())
+  clientId    String
+  client      Client    @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  
+  name        String
+  message     String
+  recipients  String?
+  status      String    @default("DRAFT")  // DRAFT, SCHEDULED, SENT, FAILED
+  
+  scheduledAt DateTime?
+  sentAt      DateTime?
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
